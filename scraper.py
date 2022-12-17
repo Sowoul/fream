@@ -1,3 +1,4 @@
+#Basic python scraper that scrapes fitgirl repacks for the top results for the required game. 
 from urllib.request import Request, urlopen
 import re
 import webview
