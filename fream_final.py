@@ -52,6 +52,8 @@ class Fream(MDApp):
 
     def close(self, obj):
         self.dia.dismiss()
+    def shut(self,obj):
+        self.cri.dismiss()
 
     def fin(self, obj):
         if ' ' in self.m.text:
@@ -72,15 +74,21 @@ class Fream(MDApp):
             except:
                 pass
         emp=[]
-        for j in tit:
-            emp.append(ItemConfirm(text=j))
         first = MDRectangleFlatButton(text="Back", on_release=self.close)
-        self.dia = MDDialog(title=f'Results for "{self.m.text}"',
-                            type="confirmation",
-                            items=emp,
-                            buttons=[
-                                first,
-                            ],
-                            )
-        self.dia.open()
+        firstt = MDRectangleFlatButton(text="Back", on_release=self.shut)
+
+        if tit==[]:
+            self.cri=MDDialog(title="Sorry...",text="Your search returned no results.\nPlease recheck spacings and spellings and try again",buttons=[firstt,])
+            self.cri.open()
+        else:
+            for j in tit:
+                emp.append(ItemConfirm(text=j))
+            self.dia = MDDialog(title=f'Results for "{self.m.text}"',
+                                type="confirmation",
+                                items=emp,
+                                buttons=[
+                                    first,
+                                ],
+                                )
+            self.dia.open()
 Fream().run()
