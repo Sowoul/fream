@@ -9,7 +9,7 @@ It should run perfectly across windows, linux, mac, as well as android and ios.
   utorrent, or any other magnet downloader  
    
 # Steps:  
-- Download the depends.py and fream_final.py files, making sure that they are in the same directory.  
+- Download the [depends.py](https://github.com/Sowoul/fream/blob/main/depends.py) and [fream_final.py](https://github.com/Sowoul/fream/blob/main/fream_final.py) files, making sure that they are in the same directory.  
   
 - Simply open the fream_final file  
 
