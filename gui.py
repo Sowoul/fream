@@ -1,3 +1,5 @@
+# The gui that will be used for this project. Because of compatibility issues in different operating systems of my last build, this time i decided to code the gui in 
+# python as well. And, because this is written in kivy, it can be extended to windows, linux, android, and ios 
 from turtle import onrelease, title
 from kivymd.app import MDApp
 from kivymd.uix.screen import Screen
